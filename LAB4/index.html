@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LAB4</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="content">
+        <div class="header-ani">
+            <h1 class="title">안녕하세요 LAB4 마켓입니다.</h1>
+        </div>
+        <nav>
+            <a href="#">메인</a>
+            <a href="./login.html">로그인</a>
+            <a href="./signup.html">회원가입</a>
+        </nav>
+        <div class="setting">
+            <div class="setting-div">
+                카테고리 선택: 
+                <select name="category" id="category" onchange="categoryChange()">
+                    <option value="ALL" selected>ALL</option>
+                    <option value="C/C++">C/C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div class="setting-div">
+                검색어 입력: 
+                <input type="text" id="searchText" onkeypress="if(event.keyCode==13) searchClick()"/>
+                <button onclick="searchClick()">검색</button>
+            </div>
+        </div>
+        <div class="result">카테고리 <b id="categoryBold">ALL</b>, 검색어 <b id="searchBold">(입력하지 않음)</b>에 대한 결과입니다.</div>
+        <div class="products-div" id="products">
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
